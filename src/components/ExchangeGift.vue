@@ -14,7 +14,7 @@
         <input type="checkbox" v-model="member.editting">
         <input v-if="member.editting" v-model="member.text" @keyup.enter="member.editting = !member.editting">
         <span v-else>{{ member.text }}</span>
-        <span v-if="member.presentFrom">  -> {{ member.presentFrom }}</span>
+        <span v-if="member.presentTo">  -> {{ member.presentTo }}</span>
       </label>
     </div>
   </div>
@@ -27,9 +27,9 @@ export default {
     return {
       msg: 'Welcome to Gift Exchange App',
       members: [
-        { text: `hoge`, select: false, editting: false, presentFrom: null, },
-        { text: `fuga`, select: false, editting: false, presentFrom: null, },
-        { text: `piyo`, select: false, editting: false, presentFrom: null, },
+        { text: `hoge`, select: false, editting: false, presentTo: null, },
+        { text: `fuga`, select: false, editting: false, presentTo: null, },
+        { text: `piyo`, select: false, editting: false, presentTo: null, },
       ],
       newMember: "",
     }
@@ -52,7 +52,7 @@ export default {
     present: function() {
       const presentMap = exchangePresents(this.members.map(t => t.text));
       this.members = this.members.map(t => {
-        t.presentFrom = presentMap[t.text];
+        t.presentTo = presentMap[t.text];
         return t;
       });
     },
