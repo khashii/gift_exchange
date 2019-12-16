@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/present_kuma.png">
     <h1>Gift Exchange App</h1>
     <hr/>
     <router-view/>
