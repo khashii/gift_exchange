@@ -4,7 +4,7 @@
     <form>
       <button @click="addMember()">ADD MEMBER</button>
       <button @click="removeMembers()">DELETE CHECKED MEMBERS</button>
-      <p><button @click="present()">EXCHANGE GIFT!</button></p>
+      <p><button @click="present()">🎁EXCHANGE GIFT🎁</button></p>
       <p>name: <input type="text" v-model="newMember"></p>
     </form>
     <div class="member-list">
@@ -25,7 +25,7 @@ export default {
   name: 'exchange_gift',
   data () {
     return {
-      msg: 'Welcome to Gift Exchange App',
+      msg: 'Welcome to Gift Exchange App🎉',
       members: [
         { text: `hoge`, select: false, editting: false, presentTo: null, },
         { text: `fuga`, select: false, editting: false, presentTo: null, },
